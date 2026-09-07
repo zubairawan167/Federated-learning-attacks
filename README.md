@@ -1,4 +1,4 @@
-# Awesome FedRecSec
+# Federated Learning Attacks: A Curated FedRecSec Index
 
 > **A curated, quality-filtered index of attacks, defenses, benchmarks, and reproducible codebases for security and privacy in Federated Recommender Systems (FedRS).**
 
@@ -31,7 +31,7 @@ Venue ranks are verified against the [CORE Conference Portal](https://portal.cor
 - [Surveys and Related Collections](#-surveys-and-related-collections)
 - [Attack Models](#-attack-models)
   - [Targeted / Item-Promotion Poisoning](#targeted--item-promotion-poisoning)
-  - [Untargeted / Availability Poisoning](#untargeted--ivailability-poisoning)
+  - [Untargeted / Availability Poisoning](#untargeted--availability-poisoning)
   - [Backdoor Attacks](#backdoor-attacks)
   - [Inference and Privacy Attacks](#inference-and-privacy-attacks)
 - [Defense Strategies](#-defense-strategies)
@@ -67,9 +67,12 @@ Venue ranks are verified against the [CORE Conference Portal](https://portal.cor
 | Title | Affiliation | Venue | Rank | Year | Material |
 |-------|-------------|-------|------|------|----------|
 | Spattack: Subgroup Poisoning Attacks on Federated Recommender Systems | Beijing Univ. of Posts and Telecommunications | WWW | A\* | 2026 | [Paper](https://arxiv.org/abs/2507.06258), [Code](https://github.com/BUPT-GAMMA/Subgroup_Poison_Attack) |
-| Preventing the Popular Item Embedding Based Attack in Federated Recommendations (PIECK) | Zhejiang Univ. | ICDE | A\* | 2024 | [Paper](https://arxiv.org/abs/2502.12958), [Code](https://github.com/yflyl613/FedRec) |
+| Preventing the Popular Item Embedding Based Attack in Federated Recommendations (PIECK) | Zhejiang Univ. | ICDE | A\* | 2024 | [Paper](https://arxiv.org/abs/2502.12958), [Code](https://github.com/junzhang-zj/PIECK) |
 | Poisoning Attack on Federated Knowledge Graph Embedding | Hong Kong Polytechnic Univ. | WWW | A\* | 2024 | [Paper](https://dl.acm.org/doi/10.1145/3589334.3645422), [Code](https://github.com/jisooma/FKGEPoison) |
 | An Optimization-Based Attack Framework Against SOTA Poisoning Defenses | Jilin Univ. | arXiv | — | 2024 | [Paper](https://arxiv.org/abs/2407.15267), [Code](https://github.com/Yuxin104/BreakSTOAPoisoningDefenses) |
+| FedRecAttack: Model Poisoning Attack to Federated Recommendation | — | ICDE | A\* | 2022 | [Paper](https://ieeexplore.ieee.org/document/9835228), [Code](https://github.com/rdz98/FedRecAttack) |
+| Poisoning Deep Learning Based Recommender Model in Federated Learning Scenarios | — | IJCAI | A\* | 2022 | [Paper](https://doi.org/10.24963/ijcai.2022/306), [Code](https://github.com/rdz98/PoisonFedDLRS) |
+| HidAttack: An Effective and Undetectable Model Poisoning Attack to Federated Recommenders | UESTC | TKDE (Q1) | — | 2024 | [Paper](https://ieeexplore.ieee.org/document/10816078), [Code](https://github.com/waqar-uestc/HidAttack) |
 
 ### Untargeted / Availability Poisoning
 
@@ -117,6 +120,10 @@ Venue ranks are verified against the [CORE Conference Portal](https://portal.cor
 | Federated Recommendation with Additive Personalization (FedRAP) | Additive decomposition | VinUniversity | ICLR | A\* | 2024 | [Paper](https://arxiv.org/pdf/2401.03748v1), [Code](https://github.com/mtics/FedRAP) |
 | FedRoLA: Robust FL Against Model Poisoning via Layer-based Aggregation | Layer-wise robust agg. | — | KDD | A\* | 2024 | [Paper](https://dl.acm.org/doi/10.1145/3637528.3671906), [Code](https://github.com/GYan58/KDD-2024-FedRoLA) |
 | Trust-GRS: Trustworthy Training Framework for GNN Recommenders Against Shilling Attacks | Trust-aware GNN | Chinese Academy of Sciences | — | — | 2024 | [Code](https://github.com/IIE-MLY/Trsut-GRS) |
+| RFRec: Efficient and Robust Regularized Federated Recommendation | Robust regularization | — | CIKM | A\* | 2024 | [Paper](https://dl.acm.org/doi/10.1145/3627673.3679682), [Code](https://github.com/Applied-Machine-Learning-Lab/RFRec) |
+| CLOUD: Privacy-Preserving Sequential Recommendation with Collaborative Confusion | Collaborative confusion | — | TOIS | A\* | 2025 | [Paper](https://dl.acm.org/doi/full/10.1145/3707204), [Code](https://github.com/weiwang0927/CLOUD) |
+| FedMF: Secure Federated Matrix Factorization | Homomorphic encryption | — | IEEE Intelligent Systems (Q2) | — | 2021 | [Paper](https://ieeexplore.ieee.org/document/9162459), [Code](https://github.com/Di-Chai/FedMF) |
+| FedPerGNN: Federated Graph Neural Network for Privacy-Preserving Personalization | Privacy-preserving GNN | — | Nature Communications (Q1) | — | 2022 | [Paper](https://www.nature.com/articles/s41467-022-30714-9), [Code](https://github.com/wuch15/FedPerGNN) |
 | PFGNNPlus: Personalized Federated GNN for Item-to-Item Recommendation | Personalized GNN | Univ. of Illinois Chicago | arXiv | — | 2023 | [Paper](https://arxiv.org/abs/2306.03191), [Code](https://github.com/zfan20/PFGNNPlus) |
 
 ---
@@ -159,7 +166,7 @@ Venue ranks are verified against the [CORE Conference Portal](https://portal.cor
 Standard benchmarks used across the FedRS attack/defense literature. Federated partitioning is by user (each user = one client) unless stated otherwise.
 
 | Dataset | Domain | Users | Items | Interactions | Link |
-|---------|--------|-------|-------|--------------|------|
+|---------|--------|-------|-------|-------------|------|
 | MovieLens-100K | Movies | 943 | 1,682 | 100K | [Link](https://grouplens.org/datasets/movielens/100k/) |
 | MovieLens-1M | Movies | 6,040 | 3,706 | 1M | [Link](https://grouplens.org/datasets/movielens/1m/) |
 | MovieLens-10M/20M | Movies | 72K / 138K | 10K / 27K | 10M / 20M | [Link](https://grouplens.org/datasets/movielens/) |
@@ -207,12 +214,12 @@ For results to be comparable across papers, report the following. Most inconsist
 
 ---
 
-## 🗺️ Threat Model Taxonomy
+## 🗾️ Threat Model Taxonomy
 
 Use this to position any new paper you read.
 
 | Dimension | Options |
-|-----------|---------|
+|----------|---------|
 | **Adversary goal** | Targeted promotion · Targeted demotion · Untargeted degradation · Privacy inference · Backdoor |
 | **Adversary capability** | Malicious clients only · Malicious server · Colluding clients · Client + auxiliary data |
 | **Knowledge** | Black-box · Grey-box (public item popularity) · White-box (full model + defense) |
@@ -259,7 +266,7 @@ Please also cite the foundational survey this collection builds upon:
 
 ## ⭐ Acknowledgements
 
-This repository builds on and complements [AttackDic](https://github.com/waqar-uestc/AttackDic), [awesome-recsys-poisoning](https://github.com/tamlhp/awesome-recsys-poisoning), [FederatedRS](https://github.com/XuanangD/FederatedRS), and [Awesome-FL](https://youngfish42.github.io/Awesome-FL/).
+This repository draws on and cross-checks several existing curated lists — [AttackDic](https://github.com/waqar-uestc/AttackDic), [awesome-recsys-poisoning](https://github.com/tamlhp/awesome-recsys-poisoning), [FederatedRS](https://github.com/XuanangD/FederatedRS), [Survey-FedRec](https://github.com/SmilesLab-XJTU/Survey-FedRec), [RS-Adversarial-Learning](https://github.com/EdisonLeeeee/RS-Adversarial-Learning), [RSPapers](https://github.com/hongleizhang/RSPapers), and [Awesome-FL](https://youngfish42.github.io/Awesome-FL/) — a large share of the attack, defense, and toolkit entries here originate from these sources rather than independent discovery; this repository's contribution is re-verifying every code link, applying a uniform venue-rank filter, and adding newer (2025–2026) papers and the evaluation-protocol/taxonomy sections.
 
 ---
 
